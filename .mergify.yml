@@ -1,8 +1,8 @@
 pull_request_rules:
-  - name: inert marker rule, never matches
+  - name: head config provenance probe
     conditions:
-      - base=branch-that-does-not-exist
+      - -draft
     actions:
       label:
         add:
-          - mergify-noop
+          - HEADCFG-USED
